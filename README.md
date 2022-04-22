@@ -15,6 +15,7 @@ Technologies:
 User Story:
 - As a user I want to enter an email and password to sign up/sign in
 - As a user I want to see a list the exhibitions
+- As a user set up you own exhibition
 - As a user I want to be able to add comments to the items and exhibiton
 - As a user I want to be able to like or dislike an item
 - As a user I want to be able to delete my comments
