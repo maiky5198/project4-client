@@ -20,7 +20,7 @@ const ItemForm = (props) => {
                     placeholder="image of item?"
                     value={item.image}
                     name='image'
-                    type="String"
+                    type="string"
                     onChange={handleChange}
                 />
                 <Form.Label>Description</Form.Label>
@@ -30,11 +30,19 @@ const ItemForm = (props) => {
                     name='description'
                     onChange={handleChange}
                 />
-                <Form.Label>Manufacturer</Form.Label>
+                <Form.Label>Artist</Form.Label>
                 <Form.Control 
-                    placeholder="manufacturer?"
-                    value={item.manufacturer}
-                    name='manufacturer'
+                    placeholder="artist?"
+                    value={item.artsit}
+                    name='artist'
+                    type="string"
+                    onChange={handleChange}
+                />
+                 <Form.Label>Year</Form.Label>
+                <Form.Control 
+                    placeholder="year?"
+                    value={item.year}
+                    name='year'
                     type="number"
                     onChange={handleChange}
                 />

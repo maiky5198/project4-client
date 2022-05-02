@@ -10,6 +10,7 @@ import gothic from '../../images/gothic.png'
 import architecture from '../../images/architecture.png'
 import music from '../../images/music.png'
 import cinema from '../../images/cinema.png'
+import sculpture from '../../images/sculpture.png'
 
 
 const cardContainerLayout = {

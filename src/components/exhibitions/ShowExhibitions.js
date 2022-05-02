@@ -81,7 +81,7 @@ const ShowExhibitions = (props) => {
         return (
             <>
             <Container className="fluid" id="showContainer">
-                    <Card className='shadow p-3 mb-5 bg-body rounded mt-3'>
+                    <Card className='p-3 mb-5 bg-body rounded mt-3'>
                         <Card.Header><h2 style={{
                             textAlign: 'center'
                         }}>{exhibition.name}</h2></Card.Header>

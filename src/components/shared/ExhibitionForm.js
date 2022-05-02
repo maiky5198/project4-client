@@ -13,7 +13,7 @@ const ExhibitionForm = (props) => {
             <br></br>
             <h1>{heading}</h1>
             <br></br>
-            <Form onSubmit={handleSubmit} className="m-2 p-5 w-100 shadow bg-body rounded">
+            <Form onSubmit={handleSubmit} className="m-2 p-5 w-100 bg-body rounded">
             <Row>
                 <Col>
                 <Form.Label>Name</Form.Label>

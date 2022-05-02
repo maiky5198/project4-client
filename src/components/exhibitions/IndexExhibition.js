@@ -10,6 +10,8 @@ import gothic from '../../images/gothic.png'
 import architecture from '../../images/architecture.png'
 import music from '../../images/music.png'
 import cinema from '../../images/cinema.png'
+import sculpture from '../../images/sculpture.png'
+
 
 
 // I'm going to declare a style object
@@ -77,7 +79,7 @@ const IndexExhibitions = (props) => {
                 }     
                
             return (
-                <Card key={exhibition._id} style={{width: '30%' }} className="m-2 shadow p-3 mb-5 bg-body rounded">
+                <Card key={exhibition._id} style={{width: '30%' }} className="m-2 p-3 mb-5 bg-body rounded">
                     <img src= {activity} alt= 'exhibition type' className= 'card-img-top'></img>
                     <Card.Header>{exhibition.name} </Card.Header>
                     <Card.Body>
