@@ -47,9 +47,27 @@ const IndexExhibitions = (props) => {
              if (exhibition.type === 'Watches'){
                     activity = watches
                 } 
-             if (exhibition.type === 'Contemporary Art'){
-                    activity = contemporary
+             if (exhibition.type === 'Abstract Expressionism'){
+                    activity = abstractexpressionism
                 } 
+                if (exhibition.type === 'Realism'){
+                    activity = realism
+                }
+                if (exhibition.type === 'Romanesque'){
+                    activity = romanesque
+                }
+                if (exhibition.type === 'Architecture'){
+                       activity = acrchitecture
+                   }
+             if (exhibition.type === 'Music'){
+                    activity = music
+                }  
+                if (exhibition.type === 'Cinema'){
+                    activity = cinema
+                } 
+                if (exhibition.type === 'Sculpture'){
+                    activity = sculpture
+                }     
                
             return (
                 <Card key={exhibition._id} style={{width: '30%' }} className="m-2 shadow p-3 mb-5 bg-body rounded">

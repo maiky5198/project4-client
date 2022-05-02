@@ -28,8 +28,20 @@ const CreateExhibition = (props) => {
                 exhibition.type = "Sneakers"
             } else if(e.target.value === "Watches"){
                 exhibition.type = "Watches"
-            } else if(e.target.value === "Contemporary Art" ){
-                exhibition.type = "Contemporary Art"
+            } else if(e.target.value === "Abstract Expressionism" ){
+                exhibition.type = "Abstract Expressionism" 
+            } else if(e.target.value === "Realism" ){
+                exhibition.type = "Realism"
+            } else if(e.target.value === "Romanesque" ){
+                exhibition.type = "Romanesque"
+            } else if(e.target.value === "Architecture" ){
+                exhibition.type = "Architecture"
+            } else if(e.target.value === "Music" ){
+                exhibition.type = "Music"
+            } else if(e.target.value === "Cinema" ){
+                exhibition.type = "Cinema"
+            } else if(e.target.value === "Sculpture" ){
+                exhibition.type = "Sculpture"
             } 
     
             const updatedValue = { [name]: value }

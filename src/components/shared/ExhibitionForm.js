@@ -41,7 +41,13 @@ const ExhibitionForm = (props) => {
                         onChange={handleChange}>
                                 <option value="Sneakers">Sneakers</option>
                                 <option value="Watches">Watches</option>
-                                <option value="Contemporary Art">Contemporary Art</option>
+                                <option value="Abstract Expressionism">Abstract Expressionism</option>
+                                <option value="Realism">Realism</option>
+                                <option value="Romanesque">Romanesque</option>
+                                <option value="Architecture">Architecture</option>
+                                <option value="Music">Music</option>
+                                <option value="Cinema">Cinema</option>
+                                <option value="Sculpture">Sculpture</option>
                     </select>
                 </div>
                 </Col>
