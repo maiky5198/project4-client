@@ -16,7 +16,7 @@ const AddItemModal = (props) => {
             const name = e.target.name
             let value = e.target.value
             // console.log('etarget type', e.target.type)
-            if (e.target.type === 'number') {
+            if (e.target.type === 'string') {
                 value = parseInt(e.target.value)
             }
 

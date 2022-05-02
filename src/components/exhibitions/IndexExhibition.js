@@ -4,7 +4,16 @@ import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import watches from '../../images/watches.png'
 import sneaker from '../../images/sneaker.png'
-import contemporary from '../../images/contemporary.png'
+import abstractexpressionism from '../../images/abstractexpressionism.png'
+import realism from '../../images/realism.png'
+import gothic from '../../images/gothic.png'
+import architecture from '../../images/architecture.png'
+import music from '../../images/music.png'
+import cinema from '../../images/cinema.png'
+import sculpture from '../../images/sculpture.png'
+
+
+
 // I'm going to declare a style object
 // this will be used to corral my cards
 // we can use basic CSS, but we have to use JS syntax
@@ -19,10 +28,10 @@ const IndexExhibitions = (props) => {
 
 
     useEffect(() => {
-        //api call to get all the adventures
+        //api call to get all the exhibitions
         getAllExhibitions()
             .then(res => {
-                // console.log('res.data.adventures', res.data.adventures)
+                // console.log('res.data.exhibitions', res.data.exhibitions)
                 setExhibitions(res.data.exhibitions)
             })
             .catch(console.error)
@@ -39,7 +48,7 @@ const IndexExhibitions = (props) => {
 
     if (exhibitions.length > 0) {
         exhibitionCards = exhibitions.map(exhibition => {
-            //sets the image on top of the cards depending on the adventure type
+            //sets the image on top of the cards depending on the exhibition type
             let activity 
              if (exhibition.type === 'Sneakers'){
                     activity = sneaker
@@ -47,12 +56,30 @@ const IndexExhibitions = (props) => {
              if (exhibition.type === 'Watches'){
                     activity = watches
                 } 
-             if (exhibition.type === 'Contemporary Art'){
-                    activity = contemporary
+             if (exhibition.type === 'Abstract Expressionism'){
+                    activity = abstractexpressionism
                 } 
+                if (exhibition.type === 'Realism'){
+                    activity = realism
+                }
+                if (exhibition.type === 'Gothic'){
+                    activity = gothic
+                }
+                if (exhibition.type === 'Architecture'){
+                       activity = architecture
+                   }
+                if (exhibition.type === 'Music'){
+                    activity = music
+                }  
+                if (exhibition.type === 'Cinema'){
+                    activity = cinema
+                } 
+                if (exhibition.type === 'Sculpture'){
+                    activity = sculpture
+                }     
                
             return (
-                <Card key={exhibition._id} style={{width: '30%' }} className="m-2 shadow p-3 mb-5 bg-body rounded">
+                <Card key={exhibition._id} style={{width: '30%' }} className="m-2 p-3 mb-5 bg-body rounded">
                     <img src= {activity} alt= 'exhibition type' className= 'card-img-top'></img>
                     <Card.Header>{exhibition.name} </Card.Header>
                     <Card.Body>
@@ -61,7 +88,7 @@ const IndexExhibitions = (props) => {
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                        {/* link to all adventures made by a specific user */}
+                        {/* link to all exhibitions made by a specific user */}
                         <span>by:</span><Link to={`/exhibitions/user/${exhibition.owner._id}`}>{exhibition.owner.email}</Link>
                     </Card.Footer>
                 </Card>

@@ -9,32 +9,44 @@ const CreateExhibition = (props) => {
     // console.log('user in create', user)
     const navigate = useNavigate()
     // we'll need two states
-    const [exhibition, setExhibition] = useState({name: '', type: ''})
-    console.log('adventure in create', exhibition)
+    const [exhibition, setExhibition] = useState({name: '', type: '', description: ''})
+    console.log('exhibition in create', exhibition)
 
     const handleChange = (e) => {
         // e === event
         e.persist()
-        //set's Adventure to the new values returned by the input fields
+        //set's Exhibition to the new values returned by the input fields
         setExhibition(prevExhibition => {
             const name = e.target.name
             let value = e.target.value
             console.log('etarget type', e.target.type)
-            if (e.target.type === 'number') {
+            if (e.target.type === 'string') {
                 value = parseInt(e.target.value)
             } 
-            //sets the value of adventure.type to the string within the select input
+            //sets the value of exhibition.type to the string within the select input
             if(e.target.value === "Sneakers"){
                 exhibition.type = "Sneakers"
             } else if(e.target.value === "Watches"){
                 exhibition.type = "Watches"
-            } else if(e.target.value === "Contemporary Art" ){
-                exhibition.type = "Contemporary Art"
+            } else if(e.target.value === "Abstract Expressionism" ){
+                exhibition.type = "Abstract Expressionism" 
+            } else if(e.target.value === "Realism" ){
+                exhibition.type = "Realism"
+            } else if(e.target.value === "Gothic" ){
+                exhibition.type = "Gothic"
+            } else if(e.target.value === "Architecture" ){
+                exhibition.type = "Architecture"
+            } else if(e.target.value === "Music" ){
+                exhibition.type = "Music"
+            } else if(e.target.value === "Cinema" ){
+                exhibition.type = "Cinema"
+            } else if(e.target.value === "Sculpture" ){
+                exhibition.type = "Sculpture"
             } 
     
             const updatedValue = { [name]: value }
 
-            console.log('prevAdventure', prevExhibition)
+            console.log('prevexhibition', prevExhibition)
             console.log('updatedValue', updatedValue)
 
             return {...prevExhibition, ...updatedValue}
@@ -44,7 +56,7 @@ const CreateExhibition = (props) => {
     const handleSubmit = (e) => {
         // e === event
         e.preventDefault()
-        //api call to create a new adventure
+        //api call to create a new exhibition
         createExhibition(user, exhibition)
             // if create is successful, we should navigate to the show page
             .then(res => {navigate(`/exhibitions/${res.data.exhibition._id}`)})
@@ -55,7 +67,7 @@ const CreateExhibition = (props) => {
                     message: createExhibitionFailure,
                     variant: 'danger',
                 }))
-        //  console.log('this is the adventure', Exhibition)
+        //  console.log('this is the exhibition', Exhibition)
     }
 
     return (

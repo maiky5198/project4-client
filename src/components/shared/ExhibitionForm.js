@@ -13,7 +13,7 @@ const ExhibitionForm = (props) => {
             <br></br>
             <h1>{heading}</h1>
             <br></br>
-            <Form onSubmit={handleSubmit} className="m-2 p-5 w-100 shadow bg-body rounded">
+            <Form onSubmit={handleSubmit} className="m-2 p-5 w-100 bg-body rounded">
             <Row>
                 <Col>
                 <Form.Label>Name</Form.Label>
@@ -30,7 +30,7 @@ const ExhibitionForm = (props) => {
                 </Col>
                 <Col>
                 <div>
-                {/* dropdown menu to select an adventure type */}
+                {/* dropdown menu to select an exhibition type */}
                 <Form.Label>Exhibition Type</Form.Label>
                     <select 
                         style={{
@@ -41,7 +41,13 @@ const ExhibitionForm = (props) => {
                         onChange={handleChange}>
                                 <option value="Sneakers">Sneakers</option>
                                 <option value="Watches">Watches</option>
-                                <option value="Contemporary Art">Contemporary Art</option>
+                                <option value="Abstract Expressionism">Abstract Expressionism</option>
+                                <option value="Realism">Realism</option>
+                                <option value="Gothic">Gothic</option>
+                                <option value="Architecture">Architecture</option>
+                                <option value="Music">Music</option>
+                                <option value="Cinema">Cinema</option>
+                                <option value="Sculpture">Sculpture</option>
                     </select>
                 </div>
                 </Col>
@@ -52,7 +58,7 @@ const ExhibitionForm = (props) => {
                         width: '100%',
                         textAlign: 'center'
                     }} 
-                    placeholder="Description this exhibition?"
+                    placeholder="Description of this exhibition?"
                     value={exhibition.description}
                     name='description'
                     onChange={handleChange}

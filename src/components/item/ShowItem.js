@@ -26,10 +26,12 @@ const ShowItem = (props) => {
             }}>
                 <Card.Header>{item.name}</Card.Header>
                 <Card.Body>
-                    <small>Quantity: {item.quantity}</small><br/>
+                    <small>Image: {item.image}</small><br/>
+                    <small>Artist: {item.artist}</small><br/>
+                    <small>Year: {item.year}</small><br/>
                     <small>{item.description}</small><br/>
-                    <Card.Footer >
-                    </Card.Footer>
+                    {/* <Card.Footer >
+                    </Card.Footer> */}
                     {
                         user._id === exhibition.owner && 
                             <>

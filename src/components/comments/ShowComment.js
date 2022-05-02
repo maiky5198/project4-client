@@ -22,7 +22,7 @@ const ShowComment = (props) => {
     
     return (
         <>
-            <Card className="m-2 w-50 shadow p-3 mb-5 bg-body rounded">
+            <Card className="m-2 w-50 p-3 mb-5 bg-body rounded">
                 <Card.Header>
                     author: {comment.owner}
                     {/* gives the option to delete a comment if the user is the owner of that comment */}

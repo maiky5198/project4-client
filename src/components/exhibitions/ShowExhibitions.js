@@ -19,7 +19,7 @@ const ShowExhibitions = (props) => {
     const [updated, setUpdated] = useState(false)
     const navigate = useNavigate()
 
-    // console.log('props in showAdventures', props)
+    // console.log('props in showexhibitions', props)
     const { id } = useParams()
     const {user} = props
     // console.log('id in showAdevtures', id)
@@ -30,7 +30,7 @@ const ShowExhibitions = (props) => {
     // we put updated in the array so that the page will re-render every time we make an update and trigger the trigger refresh function
     useEffect(() => {
         // console.log('key', process.env.REACT_APP_WEATHERAPIKEY)
-        //calls the api to get a specific adventure
+        //calls the api to get a specific exhibition
         getOneExhibition(id)
             .then(res => {
                 setExhibition(res.data.exhibition)
@@ -38,7 +38,7 @@ const ShowExhibitions = (props) => {
             .catch(console.error)  
     }, [updated, id])
 
-    //delete's an adventure
+    //delete's an exhibition
     const removeTheExhibition = () => {
         removeExhibition(user, exhibition._id)
             .then(() => {navigate(`/exhibitions`)})
@@ -49,7 +49,7 @@ const ShowExhibitions = (props) => {
     let itemCards
     let comments
 
-    //after we find an adventure, this checks for and renders item and comments respectively
+    //after we find an exhibition, this checks for and renders item and comments respectively
     if(exhibition){
         if (exhibition.item.length > 0) {
             itemCards = exhibition.item.map(itemItem => (
@@ -66,7 +66,7 @@ const ShowExhibitions = (props) => {
         }
     }
 
-    //display a spinner if there isn't an adventure
+    //display a spinner if there isn't an exhibition
     if (!exhibition) {
         return (
             <Container fluid className="justify-content-center">
@@ -81,7 +81,7 @@ const ShowExhibitions = (props) => {
         return (
             <>
             <Container className="fluid" id="showContainer">
-                    <Card className='shadow p-3 mb-5 bg-body rounded mt-3'>
+                    <Card className='p-3 mb-5 bg-body rounded mt-3'>
                         <Card.Header><h2 style={{
                             textAlign: 'center'
                         }}>{exhibition.name}</h2></Card.Header>
@@ -91,22 +91,6 @@ const ShowExhibitions = (props) => {
                                 <Col>
                                     <small>Type: {exhibition.type}</small><br/>
                                 </Col>
-                                {/* <Col>
-                                    <small>Time: {exhibition.time} Minutes</small><br/>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col>
-                                    <small>Distance: {exhibition.distance} Miles</small><br/>
-                                </Col>
-                                <Col>
-                                    <small>Difficulty Level: {exhibition.difficultyLevel}</small><br/>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col>
-                                    <small>Location: {exhibition.location}</small><br/>
-                                </Col> */}
                                 <Col>
                                     <small>Description: {exhibition.description}</small><br/>
                                 </Col>
@@ -115,7 +99,7 @@ const ShowExhibitions = (props) => {
                         <h4>Item:</h4>
                         {/* show item cards if there is any, or a message indicating it's not necessary if there isn't */}
                         {exhibition.item.length > 0 ? 
-                            <div className='gearBox'>
+                            <div className='itemBox'>
                                 {itemCards}
                             </div>
                             :
@@ -123,7 +107,7 @@ const ShowExhibitions = (props) => {
                         }   
                     </Card.Body>
 
-                    {/* if the user owns this adventure allow them to add item, edit, or delete it */}
+                    {/* if the user owns this exhibition allow them to add item, edit, or delete it */}
                     {exhibition.owner === user._id && 
                     <Card.Footer>
                             <Button onClick={() => setItemModalOpen(true)} className="m-2" variant="info">
@@ -146,7 +130,7 @@ const ShowExhibitions = (props) => {
                 <CommentForm user={user} exhibition={exhibition} triggerRefresh={() => setUpdated(prev => !prev)} heading="Comments"/>
                 {comments}
             </div>
-            {/* a pop up to edit the adventure */}
+            {/* a pop up to edit the exhibition */}
             <EditExhibitionModal 
             exhibition = {exhibition}
             show={modalOpen}
@@ -156,7 +140,7 @@ const ShowExhibitions = (props) => {
             handleClose={() => setModalOpen(false)}
     
             />
-            {/* a pop up to add the gear */}
+            {/* a pop up to add the item */}
             <AddItemModal
                 show={itemModalOpen}
                 user={user}
