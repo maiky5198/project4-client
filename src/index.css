@@ -35,19 +35,19 @@ Header {
 }
 
 .bg-myBlue {
-  background-color: #2a2b2b;
-  border-bottom: solid #0d0d0d 2px;
+  background-color: #1b7fdd;
+  border-bottom: solid #a91b1b 2px;
 }
 
 
 #signup {
-  background-color: #f2db94;
+  background-color: #94d3f2;
   border: none;
   border-radius: 5px;
   color: #0d0d0d;
 }
 #signin {
-  background-color: #f2db94;
+  background-color: #94d3f2;
   border: none;
   border-radius: 5px;
   color: #0d0d0d;
@@ -77,11 +77,11 @@ Header {
   cursor: pointer;
 }
 
-.viewAdventure {
+.viewExhibition {
   text-decoration: none;
   color: #0d0d0d;
 }
-.viewAdventure:hover {
+.viewExhibition:hover {
   color: #a6845b;
 }
 

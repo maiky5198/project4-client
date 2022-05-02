@@ -18,7 +18,7 @@ const ItemForm = (props) => {
                 <Form.Label>Image</Form.Label>
                 <Form.Control 
                     placeholder="image of item?"
-                    value={item.img}
+                    value={item.image}
                     name='image'
                     type="String"
                     onChange={handleChange}

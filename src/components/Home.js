@@ -16,14 +16,14 @@ const Home = (props) => {
 	
 	return (
 		<div style={{  
-  			backgroundImage: "url('https://i.redd.it/5fvdkmet39j71.png')",
+  			backgroundImage: "url('https://images.unsplash.com/photo-1620987278429-ab178d6eb547?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVkZXN0YWx8ZW58MHx8MHx8&w=1000&q=80')",
   			backgroundPosition: 'center',
 			position: 'fixed',
 			minHeight: '100%',
 			minWidth: '100%',  
   			backgroundSize: 'cover',
   			backgroundRepeat: 'no-repeat',
-			height: '750px',
+			height: '0px',
 			//   border: 'solid 3px black',
 			
 			}}>
