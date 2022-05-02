@@ -43,7 +43,7 @@ const ExhibitionForm = (props) => {
                                 <option value="Watches">Watches</option>
                                 <option value="Abstract Expressionism">Abstract Expressionism</option>
                                 <option value="Realism">Realism</option>
-                                <option value="Romanesque">Romanesque</option>
+                                <option value="Gothic">Gothic</option>
                                 <option value="Architecture">Architecture</option>
                                 <option value="Music">Music</option>
                                 <option value="Cinema">Cinema</option>

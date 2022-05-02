@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom'
 import watches from '../../images/watches.png'
 import sneaker from '../../images/sneaker.png'
 import abstractexpressionism from '../../images/abstractexpressionism.png'
+import realism from '../../images/realism.png'
+import gothic from '../../images/gothic.png'
+import architecture from '../../images/architecture.png'
+
 // I'm going to declare a style object
 // this will be used to corral my cards
 // we can use basic CSS, but we have to use JS syntax
@@ -53,11 +57,11 @@ const IndexExhibitions = (props) => {
                 if (exhibition.type === 'Realism'){
                     activity = realism
                 }
-                if (exhibition.type === 'Romanesque'){
-                    activity = romanesque
+                if (exhibition.type === 'Gothic'){
+                    activity = gothic
                 }
                 if (exhibition.type === 'Architecture'){
-                       activity = acrchitecture
+                       activity = architecture
                    }
                 if (exhibition.type === 'Music'){
                     activity = music

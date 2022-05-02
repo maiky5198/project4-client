@@ -5,7 +5,11 @@ import { Card, Spinner, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import watches from '../../images/watches.png'
 import sneaker from '../../images/sneaker.png'
-import contemporary from '../../images/contemporary.png'
+import abstractexpressionism from '../../images/abstractexpressionism.png'
+import realism from '../../images/realism.png'
+import gothic from '../../images/gothic.png'
+import architecture from '../../images/architecture.png'
+
 
 
 const cardContainerLayout = {
@@ -68,8 +72,8 @@ const OwnersExhibitions = (props) => {
             if (exhibition.type === 'Realism'){
                 activity = realism
             } 
-            if (exhibition.type === 'Romanesque'){
-                activity = romanesque
+            if (exhibition.type === 'Gothic'){
+                activity = gothic
             }    
             if (exhibition.type === 'Architecture'){
                 activity = architecture

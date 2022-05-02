@@ -32,8 +32,8 @@ const CreateExhibition = (props) => {
                 exhibition.type = "Abstract Expressionism" 
             } else if(e.target.value === "Realism" ){
                 exhibition.type = "Realism"
-            } else if(e.target.value === "Romanesque" ){
-                exhibition.type = "Romanesque"
+            } else if(e.target.value === "Gothic" ){
+                exhibition.type = "Gothic"
             } else if(e.target.value === "Architecture" ){
                 exhibition.type = "Architecture"
             } else if(e.target.value === "Music" ){
