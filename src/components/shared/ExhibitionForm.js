@@ -30,7 +30,7 @@ const ExhibitionForm = (props) => {
                 </Col>
                 <Col>
                 <div>
-                {/* dropdown menu to select an adventure type */}
+                {/* dropdown menu to select an exhibition type */}
                 <Form.Label>Exhibition Type</Form.Label>
                     <select 
                         style={{
@@ -58,7 +58,7 @@ const ExhibitionForm = (props) => {
                         width: '100%',
                         textAlign: 'center'
                     }} 
-                    placeholder="Description this exhibition?"
+                    placeholder="Description of this exhibition?"
                     value={exhibition.description}
                     name='description'
                     onChange={handleChange}

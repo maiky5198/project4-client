@@ -6,7 +6,7 @@ export const getAllExhibitions = () => {
     return axios(`${apiUrl}/exhibitions`)
 }
 
-// index of user's adventures function
+// index of user's exhibition function
 export const getMyExhibitions = (user) => {
     return axios({
         url: `${apiUrl}/exhibitions/mine`,
@@ -17,7 +17,7 @@ export const getMyExhibitions = (user) => {
     })
 }
 
-//index of a specific user's adventures function
+//index of a specific user's exhibition function
 export const getOwnerExhibitions = (ownerId) => {
     return axios(`${apiUrl}/exhibitions/user/${ownerId}`)
 }
@@ -30,7 +30,7 @@ export const getOneExhibition = (exhibitionId) => {
 // POST -> create function
 export const createExhibition = (user, newExhibition) => {
     console.log('user', user)
-    console.log('this is newAdventure', newExhibition)
+    console.log('this is newExhibition', newExhibition)
     return axios({
         url: `${apiUrl}/exhibitions`,
         method: 'POST',
@@ -44,7 +44,7 @@ export const createExhibition = (user, newExhibition) => {
 // PATCH -> update function
 export const updateExhibition = (user, updatedExhibition) => {
     console.log('user', user)
-    console.log('this is updatedAdventure', updatedExhibition)
+    console.log('this is updatedExhibition', updatedExhibition)
     return axios({
         url: `${apiUrl}/exhibitions/${updatedExhibition._id}`,
         method: 'PATCH',

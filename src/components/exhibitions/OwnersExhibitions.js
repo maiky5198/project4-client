@@ -29,7 +29,7 @@ const OwnersExhibitions = (props) => {
 
     useEffect(() => {
         // console.log('user id', user._id)
-        //api call to get all adventures created by a specific user
+        //api call to get all exhibitions created by a specific user
         getOwnerExhibitions(ownerId)
             .then(res => {
                 // console.log('res.data', res.data)

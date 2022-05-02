@@ -12,12 +12,12 @@ const EditItemModal = (props) => {
         // e === event
         e.persist()
 
-        //sets gear to the updated values of the input fields
+        //sets item to the updated values of the input fields
         setItem(prevItem => {
             const name = e.target.name
             let value = e.target.value
 
-            if (e.target.type === 'number') {
+            if (e.target.type === 'string') {
                 value = parseInt(e.target.value)
             }
 
@@ -34,8 +34,8 @@ const EditItemModal = (props) => {
         // e === event
         e.preventDefault()
 
-        // console.log('the gear to submit', gear)
-        //api call to update the gear
+        // console.log('the item to submit' item)
+        //api call to update the item
         updateItem(user, exhibition._id, item._id, item)
             // if create is successful, we should navigate to the show page
             .then(() => handleClose())
@@ -45,7 +45,7 @@ const EditItemModal = (props) => {
     }
 
     return (
-        //popup displaying the edit gear form
+        //popup displaying the edit item form
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton></Modal.Header>
             <Modal.Body>

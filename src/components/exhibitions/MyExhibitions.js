@@ -26,7 +26,7 @@ const MyExhibitions = (props) => {
 
     useEffect(() => {
         console.log('user id', user._id)
-        //api call to get all adventures made by the current user
+        //api call to get all exhibitions made by the current user
         getMyExhibitions(user)
             .then(res => {
                 console.log('res.data', res.data)

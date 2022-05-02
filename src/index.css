@@ -55,7 +55,7 @@ Header {
   color: #0d0d0d;
 }
 
-.gearBox {
+.itemBox {
   display: flex;
   flex-wrap: wrap;
 }

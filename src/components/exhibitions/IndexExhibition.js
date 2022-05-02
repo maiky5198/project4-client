@@ -28,10 +28,10 @@ const IndexExhibitions = (props) => {
 
 
     useEffect(() => {
-        //api call to get all the adventures
+        //api call to get all the exhibitions
         getAllExhibitions()
             .then(res => {
-                // console.log('res.data.adventures', res.data.adventures)
+                // console.log('res.data.exhibitions', res.data.exhibitions)
                 setExhibitions(res.data.exhibitions)
             })
             .catch(console.error)
@@ -48,7 +48,7 @@ const IndexExhibitions = (props) => {
 
     if (exhibitions.length > 0) {
         exhibitionCards = exhibitions.map(exhibition => {
-            //sets the image on top of the cards depending on the adventure type
+            //sets the image on top of the cards depending on the exhibition type
             let activity 
              if (exhibition.type === 'Sneakers'){
                     activity = sneaker
@@ -88,7 +88,7 @@ const IndexExhibitions = (props) => {
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                        {/* link to all adventures made by a specific user */}
+                        {/* link to all exhibitions made by a specific user */}
                         <span>by:</span><Link to={`/exhibitions/user/${exhibition.owner._id}`}>{exhibition.owner.email}</Link>
                     </Card.Footer>
                 </Card>

@@ -9,7 +9,7 @@ const EditExhibitionModal = (props) => {
     const handleChange = (e) => {
         // e === event
         e.persist()
-        //sets Adventure to the updated value of the input fields
+        //sets exhibition to the updated value of the input fields
         setExhibition(prevExhibition => {
             const name = e.target.name
             let value = e.target.value
@@ -18,7 +18,7 @@ const EditExhibitionModal = (props) => {
             if (e.target.type === 'number') {
                 value = parseFloat(e.target.value)
             }
-            //sets the value of adventure.type to the string within the select input
+            //sets the value of exhibition.type to the string within the select input
             if(e.target.value === "Sneakers"){
                 exhibition.type = "Sneakers"
             } else if(e.target.value === "Watches"){
@@ -41,7 +41,7 @@ const EditExhibitionModal = (props) => {
 
             const updatedValue = { [name]: value }
 
-            // console.log('prevAdventure', prevAdventure)
+            // console.log('prevexhibition', prevexhibition)
             // console.log('updatedValue', updatedValue)
 
             return {...prevExhibition, ...updatedValue}
@@ -52,18 +52,18 @@ const EditExhibitionModal = (props) => {
         // e === event
         e.preventDefault()
 
-        // console.log('the adventure to submit', adventure)
-        //api call to update an adventure
+        // console.log('the exhibition to submit', exhibition)
+        //api call to update an exhibition
         updateExhibition(user, exhibition)
             // if create is successful, we should navigate to the show page
             .then(() => handleClose())
             .then(() => triggerRefresh())
             .catch(console.error)
-        // console.log('this is the adventure', adventure)
+        // console.log('this is the exhibition', exhibition)
     }
 
     return (
-        //this is the pop up that displays the adventure form for editing
+        //this is the pop up that displays the exhibition form for editing
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton></Modal.Header>
             <Modal.Body>
