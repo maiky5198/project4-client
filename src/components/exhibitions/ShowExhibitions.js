@@ -49,11 +49,11 @@ const ShowExhibitions = (props) => {
     let itemCards
     let comments
 
-    //after we find an adventure, this checks for and renders gear and comments respectively
+    //after we find an adventure, this checks for and renders item and comments respectively
     if(exhibition){
         if (exhibition.item.length > 0) {
             itemCards = exhibition.item.map(itemItem => (
-                // need to pass all props needed for updateGear func in edit modal
+                // need to pass all props needed for updateItem func in edit modal
                 <ShowItem
                     key={itemItem._id} item={itemItem} user={user} exhibition={exhibition} triggerRefresh={() => setUpdated(prev => !prev)}
                 />
@@ -113,7 +113,7 @@ const ShowExhibitions = (props) => {
                             </Row>
                             </Card.Text>
                         <h4>Item:</h4>
-                        {/* show gear cards if there is any, or a message indicating it's not necessary if there isn't */}
+                        {/* show item cards if there is any, or a message indicating it's not necessary if there isn't */}
                         {exhibition.item.length > 0 ? 
                             <div className='gearBox'>
                                 {itemCards}
@@ -123,7 +123,7 @@ const ShowExhibitions = (props) => {
                         }   
                     </Card.Body>
 
-                    {/* if the user owns this adventure allow them to add gear, edit, or delete it */}
+                    {/* if the user owns this adventure allow them to add item, edit, or delete it */}
                     {exhibition.owner === user._id && 
                     <Card.Footer>
                             <Button onClick={() => setItemModalOpen(true)} className="m-2" variant="info">

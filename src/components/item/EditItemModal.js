@@ -23,7 +23,7 @@ const EditItemModal = (props) => {
 
             const updatedValue = { [name]: value }
 
-            // console.log('prevGear', prevGear)
+            // console.log('preItem', prevItem)
             // console.log('updatedValue', updatedValue)
 
             return {...prevItem, ...updatedValue}

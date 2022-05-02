@@ -20,7 +20,7 @@ export const addItem = (user, exhibitionId, newItem) => {
 // PATCH -> update function
 export const updateItem = (user, exhibitionId, itemId, updatedItem) => {
     console.log('user', user)
-    console.log('this is updatedGear', updatedItem)
+    console.log('this is updatedItem', updatedItem)
     return axios({
         url: `${apiUrl}/item/${exhibitionId}/${itemId}`,
         method: 'PATCH',

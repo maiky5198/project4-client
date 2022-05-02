@@ -11,7 +11,7 @@ const AddItemModal = (props) => {
         // e === event
         e.persist()
 
-        //sets gear the value of the input fields
+        //sets item the value of the input fields
         setItem(prevItem => {
             const name = e.target.name
             let value = e.target.value
@@ -22,7 +22,7 @@ const AddItemModal = (props) => {
 
             const updatedValue = { [name]: value }
 
-            // console.log('prevGear', prevGear)
+            // console.log('prevItem', prevItem)
             // console.log('updatedValue', updatedValue)
 
             return {...prevItem, ...updatedValue}
@@ -33,8 +33,8 @@ const AddItemModal = (props) => {
         // e === event
         e.preventDefault()
 
-        // console.log('the gear to submit', gear)
-        //api call to create a new piece of gear
+        // console.log('the item to submit', item)
+        //api call to create a new piece of item
         addItem(user, exhibition._id, item)
             // if create is successful, we should navigate to the show page
             .then(() => handleClose())
@@ -44,7 +44,7 @@ const AddItemModal = (props) => {
     }
 
     return (
-        //pop up displaying the gear form
+        //pop up displaying the item form
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton></Modal.Header>
             <Modal.Body>
