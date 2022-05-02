@@ -4,7 +4,7 @@ import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import watches from '../../images/watches.png'
 import sneaker from '../../images/sneaker.png'
-import contemporary from '../../images/contemporary.png'
+import abstractexpressionism from '../../images/abstractexpressionism.png'
 // I'm going to declare a style object
 // this will be used to corral my cards
 // we can use basic CSS, but we have to use JS syntax
@@ -59,7 +59,7 @@ const IndexExhibitions = (props) => {
                 if (exhibition.type === 'Architecture'){
                        activity = acrchitecture
                    }
-             if (exhibition.type === 'Music'){
+                if (exhibition.type === 'Music'){
                     activity = music
                 }  
                 if (exhibition.type === 'Cinema'){
