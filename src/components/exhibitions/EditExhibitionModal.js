@@ -15,7 +15,7 @@ const EditExhibitionModal = (props) => {
             let value = e.target.value
             // console.log('etarget type', e.target.type)
             // console.log('this is e.target checked', e.target.checked)
-            if (e.target.type === 'number') {
+            if (e.target.type === 'string') {
                 value = parseFloat(e.target.value)
             }
             //sets the value of exhibition.type to the string within the select input

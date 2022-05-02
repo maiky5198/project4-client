@@ -13,6 +13,7 @@ const ItemForm = (props) => {
                     placeholder="what is the name of this item?"
                     value={item.name}
                     name='name'
+                    type="string"
                     onChange={handleChange}
                 />
                 <Form.Label>Image</Form.Label>
@@ -28,6 +29,7 @@ const ItemForm = (props) => {
                     placeholder="description of item?"
                     value={item.description}
                     name='description'
+                    type="string"
                     onChange={handleChange}
                 />
                 <Form.Label>Artist</Form.Label>
