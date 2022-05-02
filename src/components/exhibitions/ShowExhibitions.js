@@ -24,12 +24,8 @@ const ShowExhibitions = (props) => {
     const {user} = props
     // console.log('id in showAdevtures', id)
 
-    //this function executes a call to the open weather api so that we can get lat and lon as well as the weather
-
-
     // we put updated in the array so that the page will re-render every time we make an update and trigger the trigger refresh function
     useEffect(() => {
-        // console.log('key', process.env.REACT_APP_WEATHERAPIKEY)
         //calls the api to get a specific exhibition
         getOneExhibition(id)
             .then(res => {
@@ -122,8 +118,6 @@ const ShowExhibitions = (props) => {
     
                     </Card.Footer>                        
                     }
-                    {/* this button triggers the function to get the weather and display the map */}
-                    {/* <Button onClick={() => getWeather()}>Get Map</Button> */}
                 </Card>
             </Container>
             <div className='commentBox'> 

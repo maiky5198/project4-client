@@ -8,7 +8,7 @@ WireFrames
 Technologies:
 - React
 - Mongoose
-- MapBox
+- Cloudinary
 - CSS
 - MongoDB
 
@@ -21,9 +21,3 @@ User Story:
 - As a user I want to be able to delete my comments
 - As a user I want to be able to sign out
 
-
-
-exhibits
-group of collections
-
-stretch goal user creates group with a title and array of exhibit
