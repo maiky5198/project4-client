@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { getAllExhibitions } from '../../api/exhibitions'
 import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import fishing from '../../images/fishing.png'
-import hiking from '../../images/hiking.png'
-import jogging from '../../images/jogging.png'
-import biking from '../../images/biking.png'
+import watches from '../../images/watches.png'
+import sneaker from '../../images/sneaker.png'
+import contemporary from '../../images/contemporary.png'
 // I'm going to declare a style object
 // this will be used to corral my cards
 // we can use basic CSS, but we have to use JS syntax
@@ -43,18 +42,18 @@ const IndexExhibitions = (props) => {
             //sets the image on top of the cards depending on the adventure type
             let activity 
              if (exhibition.type === 'Sneakers'){
-                    activity = jogging
+                    activity = sneaker
                 }
              if (exhibition.type === 'Watches'){
-                    activity = biking
+                    activity = watches
                 } 
              if (exhibition.type === 'Contemporary Art'){
-                    activity = hiking
+                    activity = contemporary
                 } 
                
             return (
                 <Card key={exhibition._id} style={{width: '30%' }} className="m-2 shadow p-3 mb-5 bg-body rounded">
-                    <img src= {activity} alt= 'activity' className= 'card-img-top'></img>
+                    <img src= {activity} alt= 'exhibition type' className= 'card-img-top'></img>
                     <Card.Header>{exhibition.name} </Card.Header>
                     <Card.Body>
                         <Card.Text>

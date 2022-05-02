@@ -3,10 +3,9 @@ import { useParams } from 'react-router-dom'
 import { getOwnerExhibitions } from '../../api/exhibitions'
 import { Card, Spinner, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import fishing from '../../images/fishing.png'
-import hiking from '../../images/hiking.png'
-import jogging from '../../images/jogging.png'
-import biking from '../../images/biking.png'
+import watches from '../../images/watches.png'
+import sneaker from '../../images/sneaker.png'
+import contemporary from '../../images/contemporary.png'
 
 
 const cardContainerLayout = {
@@ -56,19 +55,16 @@ const OwnersExhibitions = (props) => {
 
     if (ownersExhibitions.length > 0) {
         exhibitionCards = ownersExhibitions.map(exhibition => {
-            let activity 
-             if (exhibition.type === 'Walk' || exhibition.type === 'Trail Run' || exhibition.type === 'Road Run'){
-                    activity = jogging
-                }
-             if (exhibition.type === 'Road Bike' || exhibition.type === 'Mountain Bike'){
-                    activity = biking
-                } 
-             if (exhibition.type === 'Hike'){
-                    activity = hiking
-                } 
-             if (exhibition.type === 'Fishing'){
-                    activity = fishing
-                } 
+            let activity  
+            if (exhibition.type === 'Sneakers'){
+                   activity = sneaker
+               }
+            if (exhibition.type === 'Watches'){
+                   activity = watches
+               } 
+            if (exhibition.type === 'Contemporary Art'){
+                   activity = contemporary
+               } 
                
             return (
                 <Card key={exhibition._id} style={{width: '30%' }} className="m-2 shadow p-3 mb-5 bg-body rounded">

@@ -19,20 +19,12 @@ const EditExhibitionModal = (props) => {
                 value = parseFloat(e.target.value)
             }
             //sets the value of adventure.type to the string within the select input
-            if(e.target.value === "Walk"){
-                exhibition.type = "Walk"
-            } else if(e.target.value === "Road Run"){
-                exhibition.type = "Road Run"
-            } else if(e.target.value === "Trail Run" ){
-                exhibition.type = "Trail Run"
-            } else if(e.target.value === "Road Bike"){
-                exhibition.type = "Road Bike"
-            } else if(e.target.value === "Mountain Bike"){
-                exhibition.type = "Mountain Bike"
-            } else if(e.target.value === "Hike"){
-                exhibition.type = "Hike"
-            } else if(e.target.value === "Fishing"){
-                exhibition.type = "Fishing"
+            if(e.target.value === "Sneakers"){
+                exhibition.type = "Sneakers"
+            } else if(e.target.value === "Watches"){
+                exhibition.type = "Watches"
+            } else if(e.target.value === "Contemporary Art" ){
+                exhibition.type = "Contemporary Art"
             } 
 
             const updatedValue = { [name]: value }

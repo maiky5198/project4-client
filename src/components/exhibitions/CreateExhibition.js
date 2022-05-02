@@ -47,7 +47,7 @@ const CreateExhibition = (props) => {
         //api call to create a new adventure
         createExhibition(user, exhibition)
             // if create is successful, we should navigate to the show page
-            .then(res => {navigate(`/adventures/${res.data.exhibition._id}`)})
+            .then(res => {navigate(`/exhibition/${res.data.exhibition._id}`)})
             // if there is an error, we'll send an error message
             .catch(() =>
                 msgAlert({
