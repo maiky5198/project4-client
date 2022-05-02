@@ -1,0 +1,77 @@
+import React, { useState } from 'react'
+import {Modal} from 'react-bootstrap'
+import ExhibitionForm from '../shared/ExhibitionForm'
+
+const EditExhibitionModal = (props) => {
+    const { user, show, handleClose, updateExhibition, triggerRefresh } = props
+    const [exhibition, setExhibition] = useState(props.exhibition)
+
+    const handleChange = (e) => {
+        // e === event
+        e.persist()
+        //sets Adventure to the updated value of the input fields
+        setExhibition(prevExhibition => {
+            const name = e.target.name
+            let value = e.target.value
+            // console.log('etarget type', e.target.type)
+            // console.log('this is e.target checked', e.target.checked)
+            if (e.target.type === 'number') {
+                value = parseFloat(e.target.value)
+            }
+            //sets the value of adventure.type to the string within the select input
+            if(e.target.value === "Walk"){
+                exhibition.type = "Walk"
+            } else if(e.target.value === "Road Run"){
+                exhibition.type = "Road Run"
+            } else if(e.target.value === "Trail Run" ){
+                exhibition.type = "Trail Run"
+            } else if(e.target.value === "Road Bike"){
+                exhibition.type = "Road Bike"
+            } else if(e.target.value === "Mountain Bike"){
+                exhibition.type = "Mountain Bike"
+            } else if(e.target.value === "Hike"){
+                exhibition.type = "Hike"
+            } else if(e.target.value === "Fishing"){
+                exhibition.type = "Fishing"
+            } 
+
+            const updatedValue = { [name]: value }
+
+            // console.log('prevAdventure', prevAdventure)
+            // console.log('updatedValue', updatedValue)
+
+            return {...prevExhibition, ...updatedValue}
+        })
+    }
+
+    const handleSubmit = (e) => {
+        // e === event
+        e.preventDefault()
+
+        // console.log('the adventure to submit', adventure)
+        //api call to update an adventure
+        updateExhibition(user, exhibition)
+            // if create is successful, we should navigate to the show page
+            .then(() => handleClose())
+            .then(() => triggerRefresh())
+            .catch(console.error)
+        // console.log('this is the adventure', adventure)
+    }
+
+    return (
+        //this is the pop up that displays the adventure form for editing
+        <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton></Modal.Header>
+            <Modal.Body>
+                <ExhibitionForm 
+                    exhibition={exhibition}
+                    handleChange={handleChange}
+                    handleSubmit={handleSubmit}
+                    heading="Edit exhibition"
+                />
+            </Modal.Body>
+        </Modal>
+    )
+}
+    
+export default EditExhibitionModal
