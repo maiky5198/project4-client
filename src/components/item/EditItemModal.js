@@ -36,7 +36,14 @@ const EditItemModal = (props) => {
 
         // console.log('the item to submit' item)
         //api call to update the item
+        console.log('this is handle submit user',user)
+        console.log('this is handle submit exhibit', exhibition._id)
+        console.log('this is handle submit itemid', item._id)
+        console.log('this is handle submit item', item)
         updateItem(user, exhibition._id, item._id, item)
+       
+
+
             // if create is successful, we should navigate to the show page
             .then(() => handleClose())
             .then(() => triggerRefresh())
